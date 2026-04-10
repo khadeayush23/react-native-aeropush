@@ -1,0 +1,145 @@
+import { Platform } from 'react-native';
+import type { IAeropushInitParams } from '../../types/utils.types';
+
+export const HEADER_TITLE = 'Aeropush';
+export const Login_TITLE = 'Login to continue';
+export const PROFILE_TITLE = 'Profile';
+export const HEADER_SLAB_HEIGHT = 50;
+export const STD_MARGIN = HEADER_SLAB_HEIGHT / 5;
+export const END_REACH_THRESHOLD = 0;
+
+export const DOWNLOAD_BUTTON_TEXT = 'Download';
+export const DOWNLOADED_TEXT = 'Downloaded';
+export const APPLIED_TEXT = 'Applied';
+export const LOGOUT_BUTTON_TEXT = 'Logout';
+
+export const FOOTER_INFO_TITLE = 'Active Bucket: ';
+export const FOOTER_INFO_SUBTITLE = 'Version: ';
+export enum SWITCH_TEXTS {
+  ON = 'Testing',
+  OFF = 'Production',
+}
+
+export enum FOOTER_SUB_TEXTS {
+  PROD = 'User facing version',
+  STAGE = 'Internal sharing version',
+}
+
+export const SWITCH_TITLE = 'Switch ';
+export const BUCKET_CARD_UPDATED_TEXT = 'Updated at: ';
+export const BUCKET_CARD_BUNDLE_COUNT_TEXT = 'Bundles: ';
+export const BUCKET_CARD_AUTHOR_TEXT = 'Author: ';
+
+export const BUNDLE_CARD_RELEASE_NOTE = 'Release Note: ';
+export const BUNDLE_CARD_AUTHOR = 'Author';
+
+export const DOWNLOAD_PROGRESS_EVENT = 'AeropushDownloadProgress';
+
+export const DEFAULT_ERROR_MESSAGE =
+  'Something went wrong. Check your network connection';
+export const EMPTY_ERROR_MESSAGE = 'No buckets found';
+export const EMPTY_ERROR_MESSAGE_BUNDLE = 'No bundles found';
+export const EMPTY_DOWNLOAD_MESSAGE = 'No bundle is downloaded yet';
+export const DEFAULT_ERROR_PREFIX = 'Error: ';
+export const VERSION_PREFIX = 'V';
+export const RETRY_BUTTON_TEXT = 'Retry';
+
+export const CURRENT_PLATFORM = Platform.OS;
+export const IS_ANDROID = CURRENT_PLATFORM === 'android';
+
+export const KEYBOARD_AVOIDING_BEHAVIOUR = IS_ANDROID ? 'height' : 'padding';
+
+export enum LOGIN_PAGE_KEYS {
+  email = 'Email',
+  password = 'Password',
+}
+
+export enum CARD_TYPES {
+  BUNDLE = 'BUNDLE',
+  BUCKET = 'BUCKET',
+}
+
+export const BUNDLE_APPLIED_TEXT = 'Applied';
+export const DOWNLOADING_TEXT = 'Downloading';
+
+export const EMPTY_STATE = {
+  data: null,
+  isLoading: false,
+  error: null,
+};
+
+export const PIN_LENGTH = 6;
+
+export const SUBMIT_BUTTON_TEXT = 'Continue';
+export const PIN_BACK_BUTTON_TEXT = 'BACK';
+export const PIN_INPUT_KEY = 'Enter PIN';
+
+export const NOT_APPLICABLE_TEXT = 'N/A';
+
+export enum BUCKET_CARD_TEXTS {
+  DOWNLOADED = 'Downloaded',
+  APPLIED = 'Applied',
+  VERSION = 'Version',
+  BUNDLES = 'Bundles',
+  UPDATED = 'Updated',
+}
+
+export enum SWITCH_STATE_KEYS {
+  Enabled = 'True',
+  Disabled = 'False',
+}
+
+export const NO_RELEASE_NOTE_TEXT = 'No release note provided';
+
+export const AEROPUSH_LOGO_URL =
+  'https://d2shjbuzwp1rpv.cloudfront.net/aeropush_logo.png';
+
+export const AEROPUSH_EB_INFO =
+  'A crash occurred in the app. We have switched Aeropush off. Check crash report below. Continue crash to invoke other exception handlers.';
+export const AEROPUSH_EB_BTN_TXT = 'Continue Crash';
+
+export const DOWNLOAD_ALERT_HEADER = 'Download Successful';
+export const DOWNLOAD_ALERT_SWITCH_MESSAGE = 'Aeropush has been switched on. ';
+export const DOWNLOAD_ALERT_MESSAGE =
+  'Restart the app for changes to take effect.';
+export const DOWNLOAD_ALERT_BUTTON = 'Ok';
+
+export enum NATIVE_CONSTANTS {
+  SDK_TOKEN = 'x-sdk-access-token',
+  APP_TOKEN = 'x-app-token',
+  SWITCH_STATE_INDENTIFIER = 'switchState',
+  PROD_DIRECTORY = '/AeropushProd',
+  STAGE_DIRECTORY = '/AeropushStage',
+  TEMP_FOLDER_SLOT = '/temp',
+  NEW_FOLDER_SLOT = '/AeropushNew',
+  STABLE_FOLDER_SLOT = '/AeropushStable',
+  DEFAULT_FOLDER_SLOT = '/Default',
+  CURRENT_PROD_SLOT_KEY = 'aeropushProdCurrentSlot',
+  CURRENT_STAGE_SLOT_KEY = 'aeropushStageCurrentSlot',
+}
+
+export enum NativeEventTypesProd {
+  DOWNLOAD_STARTED_PROD = 'DOWNLOAD_STARTED_PROD',
+  DOWNLOAD_ERROR_PROD = 'DOWNLOAD_ERROR_PROD',
+  DOWNLOAD_PROGRESS_PROD = 'DOWNLOAD_PROGRESS_PROD',
+  DOWNLOAD_COMPLETE_PROD = 'DOWNLOAD_COMPLETE_PROD',
+  SYNC_ERROR_PROD = 'SYNC_ERROR_PROD',
+  ROLLED_BACK_PROD = 'ROLLED_BACK_PROD',
+  INSTALLED_PROD = 'INSTALLED_PROD',
+  STABILIZED_PROD = 'STABILIZED_PROD',
+  EXCEPTION_PROD = 'EXCEPTION_PROD',
+  AUTO_ROLLED_BACK_PROD = 'AUTO_ROLLED_BACK_PROD',
+}
+export enum NativeEventTypesStage {
+  DOWNLOAD_ERROR_STAGE = 'DOWNLOAD_ERROR_STAGE',
+  DOWNLOAD_PROGRESS_STAGE = 'DOWNLOAD_PROGRESS_STAGE',
+  DOWNLOAD_COMPLETE_STAGE = 'DOWNLOAD_COMPLETE_STAGE',
+  INSTALLED_STAGE = 'INSTALLED_STAGE',
+}
+
+export const AEROPUSH_NATIVE_EVENT = 'AEROPUSH_NATIVE_EVENT';
+
+export const RESTART_REQUIRED_MESSAGE =
+  'Bundle change detected. Click to restart app.';
+
+export const DEFAULT_AEROPUSH_PARAMS: IAeropushInitParams = {};
